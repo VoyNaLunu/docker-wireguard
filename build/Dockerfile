@@ -13,6 +13,7 @@ RUN apk update \
     net-tools \
     iptables \
     ip6tables \
+    curl \
     && \
     rm -rf /var/cache/apk/*
 

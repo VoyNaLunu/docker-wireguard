@@ -1,0 +1,14 @@
+version: "2.4"
+
+services:
+  docker-wireguard:
+    # env_file:
+    #   - ./.env
+    build: ./build
+    volume:
+      - ./wg0.conf:/etc/wireguard/wg0.conf
+    image: docker-wireguard:0.3
+    ports:
+      - "51820:51820/udp" #doesn't work without /udp https://github.com/moby/moby/issues/15127
+    cap_add:
+      - NET_ADMIN

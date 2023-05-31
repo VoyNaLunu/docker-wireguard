@@ -7,9 +7,7 @@ services:
     build: ./build
     image: docker-wireguard:0.1
     volumes:
-      - type: bind
-        source: ./wg0.conf
-        target: /etc/wireguard/wg0.conf
+      - ./conf.d:/etc/wireguard/conf.d
     ports:
       - "51820:51820/udp" #doesn't work without /udp https://github.com/moby/moby/issues/15127
     cap_add:

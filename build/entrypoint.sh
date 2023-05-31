@@ -5,14 +5,14 @@
 startInterfaces() {
 
     #check if wireguard config files are present
-    config_files=$(find /etc/wireguard/ -maxdepth 1 -name "*.conf")
+    config_files=$(find /etc/wireguard/conf.d/ -maxdepth 1 -name "*.conf")
     if [ ${#config_files} -eq 0 ]
     then
         echo "wireguard config files not found" && exit 1
     fi
 
     #start all wireguard interfaces
-    for filename in /etc/wireguard/*.conf
+    for filename in /etc/wireguard/conf.d/*.conf
     do
         echo $filename
         wg-quick up ${filename}    

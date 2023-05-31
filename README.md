@@ -2,6 +2,7 @@
 
 ## Description
 Very basic and easy to modify locally built alpine container that provides wireguard vpn  
+size of the image: ~20MB
 
 ## How to run
 

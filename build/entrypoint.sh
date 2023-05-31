@@ -6,7 +6,7 @@ startInterfaces() {
 
     #check if wireguard config files are present
     config_files=$(find /etc/wireguard/ -maxdepth 1 -name "*.conf")
-    if [ ${#config_files[@]} -eq 0 ]
+    if [ ${#config_files} -eq 0 ]
     then
         echo "wireguard config files not found" && exit 1
     fi

@@ -11,7 +11,8 @@ Very basic and easy to modify locally built alpine container that provides wireg
 2. Move into the cloned folder  
 `cd docker-wireguard/`
 
-3. Put your server configuration file into conf.d folder or use docker command below to generate configuration for server and client(s), where `n` is number of clients
+3. Put your server configuration file into conf.d folder or use docker command below to generate configuration for server and client(s),  
+where `n` is number of clients  
 `docker compose run --rm docker-wireguard generate n`
 
 

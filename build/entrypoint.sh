@@ -21,7 +21,7 @@ startInterfaces() {
 }
 
 healthCheck() {
-
+    trap "echo 'stopping container...'" EXIT
     #check if wireguard interfaces are up and keep container alive
     while true
     do

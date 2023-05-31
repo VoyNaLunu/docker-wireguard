@@ -1,0 +1,14 @@
+[Interface]
+Address = 172.27.165.1/24
+ListenPort = 51820
+PrivateKey = 
+
+[Peer]
+PublicKey = 
+PresharedKey = 
+AllowedIPs = 172.27.165.2/32
+
+[Peer]
+PublicKey = 
+PresharedKey = 
+AllowedIPs = 172.27.165.3/32

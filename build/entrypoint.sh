@@ -46,7 +46,12 @@ main() {
 case $1 in
 
     generate)
-        ./helpers.sh "$1" "$2"
+        if [[ $2 == "" ]]
+        then
+            ./helpers.sh "$1" 1
+        else
+            ./helpers.sh "$1" "$2"
+        fi
         exit 0
         ;;
     
